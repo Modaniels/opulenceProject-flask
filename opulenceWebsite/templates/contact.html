@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS links -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+    <!-- JS links -->
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+
+    <!-- Favicons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-icons.css') }}">
+       
+       <style>
+        body{
+            background-color: black;
+            color: lightgrey;
+        }
+        .form-control{
+            background-color: #080808;
+            color: white;
+            border: 1px solid #333;
+            border-radius: 0;
+            
+        }
+        .form-control:hover{
+            background-color: #080808;
+            color: white;
+            border: 1px solid goldenrod;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .section-title {
+            position: relative;
+            margin-top: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 0;
+            line-height: 1px;
+            margin: 0;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: color-mix(in srgb,  rgba(255, 255, 255, 0.7), transparent 30%);
+            position: relative;
+        }
+        
+        .section-title h2::after {
+            content: "";
+            width: 120px;
+            height: 1px;
+            display: inline-block;
+            background: goldenrod;
+            margin: 4px 10px;
+        }
+
+        .section-title {
+        font-size: 2.5em;
+        font-family: 'Playfair Display', serif;
+        color: goldenrod;
+        }
+
+        .info-item i{
+            color: lightgray;
+            background: goldenrod;
+            font-size: 20px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            transition: all 0.3s ease-in-out;
+            margin-right: 15px;
+        }
+        
+        form ::placeholder{
+          color: white;
+        }
+
+
+        </style>
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="fixed-top">
+    <img src="{{ url_for('static', filename='images/OpulenceLogo.png') }}" alt="Restaurant Logo" class="rounded-pill">
+    
+    <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/menu">Menu</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/reservation" class="btn btn-outline-warning " style="border-radius: 25px; color: whitesmoke; padding-left: 15px; padding-right: 15px;margin-top: -5px;">Make Reservations</a>&nbsp;&nbsp;</li>
+
+        </ul>
+    </nav>
+</header>
+
+    <div class="container" style="margin-top: 125px;">
+
+        <div class="row gy-4">
+            <!-- Section Title -->
+            <div class="container section-title">
+                <h2>contacts</h2>
+                <p>Contact Us</p>
+              </div>
+              <!-- End Section Title -->
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Juja, JKUAT</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" >
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Open Hours</h3>
+                <p>Monday-Saturday:<br>8:00 AM - 11:00 PM</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+254 71234567</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>info@opulence.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="#" method="#">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <a href="" class="btn btn-outline-warning " style="border-radius: 25px; color: whitesmoke; padding-left: 15px; padding-right: 15px;margin-top: -5px;">Send Message</a>&nbsp;&nbsp;
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+     <!-- Footer -->
+     <footer class="footer">
+      <div class="footer-container">
+        <!-- Location Section -->
+        <div class="footer-section location">
+          <h2>Our Location</h2>
+          <p>123 Oppulence St., Culinary City</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Email: info@aOppulence.com</p>
+        </div>
+    
+        <!-- Navigation Section -->
+        <div class="footer-section navigation">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/menu">Menu</a></li>
+            <li><a href="/reservation">Reservations</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+    
+        <!-- Social Media Section -->
+        <div class="footer-section social">
+          <h2>Follow Us</h2>
+          <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>&nbsp;
+              <a href=""><i class="bi bi-facebook"></i></a>&nbsp;
+              <a href=""><i class="bi bi-instagram"></i></a>&nbsp;
+              <a href=""><i class="bi bi-linkedin"></i></a>&nbsp;
+            </div>
+        </div>
+      </div>
+    
+      <p class="footer-note">&copy; 2024 Opulence Restaurant. <span class="text-warning"> All rights reserved.</span></p>
+    </footer>
+    
+</body>
+</html>

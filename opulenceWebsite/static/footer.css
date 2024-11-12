@@ -1,0 +1,75 @@
+/* /* Footer Styles */
+.footer {
+    background-color: #1e1d1d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    flex: 1 1 150px;
+    margin: 10px;
+  }
+  
+  .footer h2 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 10px;
+    font-size: 16px;
+  }
+  
+  .footer-section p,
+  .footer-section ul,
+  .footer-note {
+    margin: 5px 0;
+    line-height: 1.4;
+  }
+  
+  .navigation ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color:  rgba(255, 255, 255, 0.7);;
+    margin: 3px 0;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  
+  .location{
+    color: rgba(255, 255, 255, 0.7);;
+  }
+  .navigation a:hover {
+    color: goldenrod;
+  }
+
+  .social a {
+    transition: color 0.3s;
+    color: color-mix(in srgb, rgba(255, 255, 255, 0.7), transparent 20%);
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 20px;
+  }
+  
+  .social a:hover {
+    color: goldenrod;
+  }
+  
+  
+  .footer-note {
+    color: #fff;
+    margin-top: 15px;
+  }

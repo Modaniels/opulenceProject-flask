@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opulence Dining Experience</title>
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='test.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+    <!-- JS links -->
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='test.js') }}"></script>
+
+    <!-- Favicons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-icons.css') }}">
+
+
+</head>
+<body>
+
+        <!-- Header -->
+        <header class="fixed-top">
+          <img src="{{ url_for('static', filename='images/OpulenceLogo.png') }}" alt="Restaurant Logo" class="rounded-pill">
+          
+          <nav>
+              <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/menu">Menu</a></li>
+                  <li><a href="/gallery">Gallery</a></li>
+                  <li><a href="/contact">Contact</a></li>
+                  <li><a href="/reservation" class="btn btn-outline-warning " style="border-radius: 25px; color: whitesmoke; padding-left: 15px; padding-right: 15px;margin-top: -5px;">Make Reservations</a>&nbsp;&nbsp;</li>
+      
+              </ul>
+          </nav>
+      </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="restaurant-name">Opulence <span style="color: lightgrey;"> Restaurant</span></h1>
+            <p class="intro-text">Experience luxury dining like never before. Discover a world of flavor, elegance, and ambiance in every dish.</p>
+            <div class="button">
+                <a href="menu.html" class="btn btn-outline-warning " style="border-radius: 25px; color: whitesmoke; padding-left: 15px; padding-right: 15px;">Explore Menu</a>&nbsp;&nbsp;
+
+                <a href="resevation.html" class="btn btn-outline-warning " style="border-radius: 25px; color: whitesmoke; padding-left: 25px; padding-right: 25px;">Book a Table</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="story" class="about row" >
+        <div id="p1"  class="col-lg-6 col-sm-6"> 
+            <h2 class="section-title">About Us</h2>
+            <p>At Opulent Dining, we believe in an experience that transcends taste. Every dish, every drink, and every element of our service is designed to embody the pinnacle of luxury.</p>
+        </div>
+
+        <div class="col-lg-6 col-sm-6">
+          <img src="{{ url_for('static', filename='images/restaurantpic.webp') }}"
+          alt="Dining experience" class="rounded-pill">
+        </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <div class=" section-title" style="background-color: black; padding-bottom: 5px; padding-top: 30px; padding-left: 50px;">
+        <h2>Our services</h2>
+        <p>Why Choose our Restaurant</p>
+    </div>
+    <!-- End Section Title -->
+    <section class="services-container container-fluid ">
+
+        <div class="services-item d-flex flex-column">
+            <div class="card-item">
+              <span style="color: goldenrod; font-weight: bold;">01</span>
+              <h2><a href="#">Exclusive Cuisine</a></h2>
+              <p>Handcrafted dishes prepared by our world-renowned chefs.</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class=" services-item">
+            <div class="card-item">
+              <span  style="color: goldenrod; font-weight: bold;">02</span>
+              <h2><a href="#">Fine Wines</a></h2>
+              <p>An exquisite selection from the finest vineyards across the globe.</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class=" services-item">
+            <div class="card-item">
+              <span  style="color: goldenrod; font-weight: bold;">03</span>
+              <h2><a href="#">Private Dining</a></h2>
+              <p>A personalized, exclusive experience for our most esteemed guests.</p>
+            </div>
+          </div>
+          <!-- Card Item -->
+        
+    </section>
+        <!-- explore menu button-->
+        <div class="container-fluid" style="background-color: black; padding-top: 10px; padding-left: 60px; padding-bottom: 30px;">
+        <a href="" class="btn btn-outline-warning " style="border-radius: 25px; color: whitesmoke; padding-left: 15px; padding-right: 15px; margin-top: 30px;">Explore Menu</a>&nbsp;&nbsp;
+        </div>
+
+    <!-- section count -->
+    <section class="section-count">
+        <p class="count-text">We believe in making quality food</p>
+        <div class="counts">
+            <ul>
+                <li><h1 class="count-number" data-target="2000" data-suffix="+">0</h1></li>
+                <li>Happy Customers</li>
+            </ul>
+            <ul>
+                <li><h1 class="count-number" data-target="98" data-suffix="%">0</h1></li>
+                <li>Customer Satisfaction</li>
+            </ul>
+            <ul>
+                <li><h1 class="count-number" data-target="8" data-suffix="+">0</h1></li>
+                <li>Our Branches</li>
+            </ul>
+            <ul>
+                <li><h1 class="count-number" data-target="200" data-suffix="+">0</h1></li>
+                <li>Total Employees</li>
+            </ul>
+        </div>
+
+
+
+    </section>
+
+    <!--Customer Feedback section-->
+
+    <div class=" section-title" style="background-color: black; padding-bottom: 5px; padding-top: 30px; padding-left: 50px;">
+        <h2>Testimonials</h2>
+        <p>What they're saying about us</p>
+    </div>
+    <!-- End Section Title -->
+    <section class="feedback-container container-fluid">
+
+        <div class="customer-feedback" style="margin-left: 30px;">
+            <p class="p"><i class=" bi bi-quote quote-icon-left"></i>I can always find something delicious at Opulence Restaurant. My family especially loves the Sunday Special. <i class="bi bi-quote quote-icon-right"></i></p>
+            <p class="p-name">-Dr.Lawrence Nderu</p>
+        </div>
+        <div class="customer-feedback">
+            <p class="p"><i class=" bi bi-quote quote-icon-left"></i>Opulence Restaurant is a hit with my friends who come for a one-of-a-kind dining experience.Definitely coming back.<i class="bi bi-quote quote-icon-right"></i>
+            </p>
+            <p class="p-name">-Brian Murithi</p>
+        </div>
+        <div class="customer-feedback">
+            <p id="p"><i class=" bi bi-quote quote-icon-left"></i>I love Opulence Restaurant. The service is friendly and excellent every time. If you're looking for a down-home restaurant that will blow away your guests, this is the place to go. <i class="bi bi-quote quote-icon-right"></i></p>
+            <p class="p-name">-Faith Musonik</p>
+        </div>
+    </section>
+
+
+    <!-- Teams Section -->
+    <div class=" section-title" style="background-color:#111; padding-bottom: 10px; padding-top: 20px; padding-left: 50px;">
+        <h2>Our Team</h2>
+        <p>Meet Our Team</p>
+    </div>
+    <section class="team">
+        <div class="team-members">
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/brian.jpg') }}" alt=""
+                 width="100%"
+                 height="220" 
+                 class="rounded-pill">
+                 <h3>BRIAN MURITHI</h3>
+                 <p>PI</p>
+                 <div class=" t social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-github"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/joy.jpg') }}" alt=""
+                 width="100%"
+                 height="220" 
+                 class="rounded-pill">
+                 <h3>JOY CHEBET</h3>
+                 <p>TEAM LEAD</p>
+                 <div class="t social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-github"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/seline.jpg') }}" alt=""
+                 width="100%"
+                 height="220" 
+                  class="rounded-pill">
+                 <h3>SELINE OWINO</h3>
+                 <p>FULL STACK DEVELOPER</p>
+                 <div class="t social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-github"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+            </div>
+
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/daniel.jpg') }}" alt=""
+                 width="100%"
+                 height="220" 
+                 class="rounded-pill">
+                 <h3>DANIEL OKINDA</h3>
+                 <p>BACK END DEVELOPER</p>
+                 <div class="t social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-github"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+            </div>
+
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/nancy.jpg') }}" alt=""
+                 width="100%"
+                 height="220" 
+                 class="rounded-pill">
+                 <h3>NANCY KIMUNYI</h3>
+                 <p>UI/UX DESIGNER</p>
+                 <div class="t social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-github"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                 
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/joyk.jpg') }}" alt=""
+                 width="100%"
+                 height="220" 
+                 class="rounded-pill">
+                 <h3>JOY KABUI</h3>
+                 <p>WEB DEVELOPER</p>
+                 <div class="t social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-github"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+            </div>
+            
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/curtis.jpg') }}" alt=""
+                 width="100%"
+                 height="220" 
+                 class="rounded-pill">
+                 <h3>ALEX CURTIS</h3>
+                 <p>DATA ANALYST</p>
+                 <div class="t social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-github"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+            </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Location Section -->
+          <div class="footer-section location">
+            <h2>Our Location</h2>
+            <p>123 Oppulence St., Culinary City</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@aOppulence.com</p>
+          </div>
+      
+          <!-- Navigation Section -->
+          <div class="footer-section navigation">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/menu">Menu</a></li>
+              <li><a href="/reservation">Reservations</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+      
+          <!-- Social Media Section -->
+          <div class="footer-section social">
+            <h2>Follow Us</h2>
+            <div class="social">
+                <a href=""><i class="bi bi-twitter-x"></i></a>&nbsp;
+                <a href=""><i class="bi bi-facebook"></i></a>&nbsp;
+                <a href=""><i class="bi bi-instagram"></i></a>&nbsp;
+                <a href=""><i class="bi bi-linkedin"></i></a>&nbsp;
+              </div>
+          </div>
+        </div>
+      
+        <p class="footer-note">&copy; 2024 Opulence Restaurant. <span class="text-warning"> All rights reserved.</span></p>
+      </footer>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opulence Restaurant Gallery</title>
+
+  <!-- CSS links -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='gallery.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+  <!-- JS links -->
+  <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <script src="{{ url_for('static', filename='gallery.js') }}"></script>
+
+  <!-- Favicons -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-icons.css') }}">
+
+</head>
+<body style="background-color: black;">
+  
+  <!-- Header -->
+  <header class="fixed-top">
+    <img src="{{ url_for('static', filename='images/OpulenceLogo.png') }}" alt="Restaurant Logo" class="rounded-pill">
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/gallery">Gallery</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/reservation" class="btn btn-outline-warning" style="border-radius: 25px; color: whitesmoke; padding: 5px 15px;">Make Reservations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Gallery Container -->
+  <div class="gallery-container">
+    
+    <!-- Section Title -->
+    <div class="container section-title">
+      <h2>Gallery</h2>
+      <p>A glimpse of our world</p>
+    </div>
+    <!-- End Section Title -->
+
+    <!-- Gallery Items -->
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/rest-img.jpg') }}" alt="rest-img">
+      <div class="overlay">
+        <p>Great View</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/rest-img2.avif') }}" alt="rest-img2">
+      <div class="overlay">
+        <p>Sitting area 1</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/wines3.jpg') }}" alt="restaurantpic">
+      <div class="overlay">
+        <p>Finest Drinks</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/food1.jpg') }}" alt="Course Meal">
+      <div class="overlay">
+        <p>Starter</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/pizza.jpg') }}" alt="Drinks">
+      <div class="overlay">
+        <p>Deluxe Pizza</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/beefstew.jpg') }}" alt="Beef Stew">
+      <div class="overlay">
+        <p>Beef Stew</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/caramelicecream.avif') }}" alt="Caramel Cream">
+      <div class="overlay">
+        <p>Caramel Cream</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/chef cooking.jpg') }}" alt="Burger">
+      <div class="overlay">
+        <p>Art in the making</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/LUNCH&DINNER.jpg') }}" alt="Lunch & Dinner Set">
+      <div class="overlay">
+        <p>Lunch & Dinner Set</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/food1.jpg') }}" alt="Steak">
+      <div class="overlay">
+        <p>Steak</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/OpulenceLogo.png') }}" alt="Steak">
+      <div class="overlay">
+        <p>Steak</p>
+      </div>
+    </div>
+  </div>
+
+     <!-- Footer -->
+     <footer class="footer">
+      <div class="footer-container">
+        <!-- Location Section -->
+        <div class="footer-section location">
+          <h2>Our Location</h2>
+          <p>123 Oppulence St., Culinary City</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Email: info@aOppulence.com</p>
+        </div>
+    
+        <!-- Navigation Section -->
+        <div class="footer-section navigation">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/menu">Menu</a></li>
+            <li><a href="/reservation">Reservations</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+    
+        <!-- Social Media Section -->
+        <div class="footer-section social">
+          <h2>Follow Us</h2>
+          <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>&nbsp;
+              <a href=""><i class="bi bi-facebook"></i></a>&nbsp;
+              <a href=""><i class="bi bi-instagram"></i></a>&nbsp;
+              <a href=""><i class="bi bi-linkedin"></i></a>&nbsp;
+            </div>
+        </div>
+      </div>
+    
+      <p class="footer-note">&copy; 2024 Opulence Restaurant. <span class="text-warning"> All rights reserved.</span></p>
+    </footer>
+
+  <!-- Additional JavaScript -->
+  <script src="{{ url_for('static', filename='gallery.js') }}"></script>
+
+</body>
+</html>

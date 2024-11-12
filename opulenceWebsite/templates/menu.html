@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    
+    <!-- CSS links -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+    <!-- JS links -->
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='menu2.js') }}"></script>
+
+    <!-- Favicons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-icons.css') }}">
+    
+    <!-- Favicon and icons -->
+    <link href="assets/img/favicon.png" rel="icon">
+
+    <style>
+        /* Additional styling for active menu filter */
+        .menu-filters li {
+            display: inline-block;
+            margin: 0 10px;
+            cursor: pointer;
+            color: lightgrey;
+        }
+        .menu-filters .filter-active {
+            font-weight: bold;
+            text-decoration: underline 3px goldenrod;
+        }
+        .menu-item {
+            display: none;
+        }
+        body{
+            background-color: #000;
+            color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+
+      <!-- Header -->
+  <header class="fixed-top">
+    <img src="{{ url_for('static', filename='images/OpulenceLogo.png') }}" alt="Restaurant Logo" class="rounded-pill">
+    
+    <nav> 
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/menu">Menu</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/reservation" class="btn btn-outline-warning " style="border-radius: 25px; color: whitesmoke; padding-left: 15px; padding-right: 15px;margin-top: -5px;">Make Reservations</a>&nbsp;&nbsp;</li>
+
+        </ul>
+    </nav>
+</header>
+
+<!-- Menu Section -->
+<section id="menu" class="menu section" style="margin-top: 130px;">
+    <!-- Section Title -->
+    <div class="container section-title">
+        <h2>Menu</h2>
+        <p>Check Our Tasty Menu</p>
+    </div>
+    <!-- End Section Title -->
+
+    <div class="container isotope-layout">
+        <!-- Menu Filters -->
+        <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul class="menu-filters isotope-filters">
+                    <li data-filter="all"   class="filter-active">All</li>
+                    <li data-filter="Brunch">Brunch</li>
+                    <li data-filter="main">Main Course</li>
+                    <li data-filter="dessert">Dessert</li>
+                    <li data-filter="drinks">Drinks</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="row isotope-container">
+            <!-- Brunch -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/espresso.jpg') }}" alt="Espresso">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Espresso</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/blacktea.jpg') }}" alt="blacktea">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">blacktea</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 3 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/capuccinoandcroissant.jpg') }}" alt="capuccinoandcroissant.jpg">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">capuccinoandcroissant</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 4 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/caramelicedcofee.jpg') }}" alt="caramelicedcofee">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">caramelicedcoffee</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 5 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/pancakes2.jpg') }}" alt="caramelicedcofee">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Pancakes</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">150.00 </span>KES</div>
+            </div>
+
+            <!-- item 6 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/naan bread.jpg') }}" alt="choccake">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Naan Bread</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">100.00 </span>KES</div>
+            </div>
+
+            <!-- item 7 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/frenchtoast.jpg') }}" alt="frenchtoast">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">frenchtoast</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 8 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/romesco toast.jpg') }}" alt="romesco toast">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">romesco toast</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+             <!-- item 9 -->
+             <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/scrambled egg.jpg') }}" alt="scrambled egg">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">scrambled egg</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+             <!-- item 10 -->
+             <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/strawberry waffles.jpg') }}" alt="strawberry waffles">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">strawberry waffles</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 11 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/blueberrypie.avif') }}" alt="blueberrypie">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">blueberrypie</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 12 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-Brunch">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/pancakes.avif') }}" alt="pancakes">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">pancake</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+    
+
+            <!-- Main Course -->
+
+            <!-- item 1 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/beef.jpg') }}" alt="beef">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">beef</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 2 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/beefstew.jpg') }}" alt="beefstew">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">beefstew</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 3 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/buffalochickenwings.jpg') }}" alt="buffalochickenwings">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">buffalochickenwings</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+
+            <!-- item 4 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/butterchicken stew.jpg') }}" alt="butterchicken stew">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">butterchicken stew</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 5 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/butternutsquashandmaize.jpg') }}" alt="butternutsquashandmaize">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">butternutsquashandmaize</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 6 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/Chichken wings.jpg') }}" alt="vanillacake">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Chichken wings </div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">1050.00 </span>KES</div>
+            </div>
+
+            <!-- item 8 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/chickenandrice.jpg') }}" alt="chickenandrice">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">chickenandrice</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+            
+            <!-- item 10 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/chickendrums.jpg') }}" alt="chickendrums">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">chickendrums</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 11 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/chickenpilau.jpg') }}" alt="images/chickenpilau">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">images/chickenpilau</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 12 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/friesandsteak.jpg') }}" alt="friesandsteak">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">friesandsteak</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 13 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/Lambchop.jpg') }}" alt="Lambchop">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Lambchop</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+
+            <!-- item 15 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/naan bread.jpg') }}" alt="naan bread">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">naan bread</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 16 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/pizza.jpg') }}" alt="pizza">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">pizza</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+
+             <!-- item 18 -->
+             <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/rice and stew.jpg') }}" alt="rice and stew">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">rice and stew</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+
+            <!-- item 20 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/spicynoodles.jpg') }}" alt="spicynoodles">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">spicynoodles</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            <!-- item 21 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-main">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/ugali.jpg') }}" alt="ugali">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">ugali</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+            
+
+            <!-- Dessert -->
+
+            <div class="col-lg-3 col-sm-6  menu-item filter-dessert">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/chocolatebiscoff.jpg') }}" alt="chocolatebiscoff">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Chocolate Biscoff Tart</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">550.00 </span>KES</div>
+            </div>
+            <!-- item 2 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-dessert">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/carrotcupcake.jpg') }}" alt="carrotcupcake">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Carrot Cupcake</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">230.00 </span>KES</div>
+            </div>
+            <!-- item 3 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-dessert">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/cinnamon rolls.jpg') }}" alt="cinnamon">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Cinnamon Rolls</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+            <!-- item 4 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-dessert">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/choccake.avif') }}" alt="choccake">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Chocolate Cake</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">450.00 </span>KES</div>
+            </div>
+            <!-- item 5 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-dessert">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/strawberryicecream.jpg') }}" alt="strawberryicecream">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">strawberry Ice Cream</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">320.00 </span>KES</div>
+            </div>
+            <!-- item 6 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-dessert">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/caramelicecream.avif') }}" alt="caramelicecream">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Caramel Ice Cream</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+            <!-- item 7 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-dessert">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/vanillacake.jpg') }}" alt="vanillacake">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Vanilla Cake</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+            <!-- item 8 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-dessert">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/strawberry waffles.jpg') }}" alt="strawberry waffles">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Strawberry Waffles</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+
+
+
+            <!-- Drinks -->
+
+            <div class="col-lg-3 col-sm-6  menu-item filter-drinks">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/amarettoSour.jpg') }}" alt="amarettoSour">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">amarettoSour</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+            <!-- item 2 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-drinks">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/bluelagoon.jpg') }}" alt="bluelagoon">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">bluelagoon</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+            <!-- item 3 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-drinks">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/bourbonOldFashioned.jpg') }}" alt="bourbonOldFashioned">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">bourbonOldFashioned</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+            <!-- item 4 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-drinks">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/mojito.jpg') }}" alt="mojito">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">mojito</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+            <!-- item5 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-drinks">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/strawberryDaiquiri.jpg') }}" alt="strawberryDaiquiri">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">strawberryDaiquiri</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+            <!-- item 6 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-drinks">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/vodkaSangria.jpg') }}" alt="vodkaSangria">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">vodkaSangria</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+            <!-- item 7 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-drinks">
+                <div class="product"> 
+                    <img src=" {{ url_for('static', filename='images/Passion juice.jpg') }}" alt="Passion juice">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">Passion juice</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+            <!-- item 8 -->
+            <div class="col-lg-3 col-sm-6  menu-item filter-drinks">
+                <div class="product">
+                    <img src=" {{ url_for('static', filename='images/mangojuice.jpg') }}" alt="mangojuice">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <a href="single.html" style="text-decoration: none;color: #000;">
+                            <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="title text pt-4 pb-1">mangojuice</div>
+                <div class="d-flex align-content-center justify-content-center"> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> <span class="fas fa-star"></span> 
+                    <span class="fas fa-star"></span> 
+                </div>
+                <div class="price text"><span class="golden">350.00 </span>KES</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    // Function to apply the filter logic
+    function applyFilter(filter) {
+        document.querySelectorAll('.menu-item').forEach(item => {
+            if (filter === 'all' || item.classList.contains(`filter-${filter}`)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    // Apply event listeners to filter buttons
+    document.querySelectorAll('.menu-filters li').forEach(filterBtn => {
+        filterBtn.addEventListener('click', () => {
+            const filter = filterBtn.getAttribute('data-filter');
+
+            // Set active class
+            document.querySelector('.filter-active').classList.remove('filter-active');
+            filterBtn.classList.add('filter-active');
+
+            // Apply the selected filter
+            applyFilter(filter);
+        });
+    });
+
+    // Display all items by default when the page loads
+    window.addEventListener('DOMContentLoaded', () => {
+        // Set "all" filter as active
+        const defaultFilter = document.querySelector('.menu-filters li[data-filter="all"]');
+        if (defaultFilter) {
+            defaultFilter.classList.add('filter-active');
+            applyFilter('all'); // Apply the "all" filter on page load
+        }
+    });
+</script>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Location Section -->
+          <div class="footer-section location">
+            <h2>Our Location</h2>
+            <p>123 Oppulence St., Culinary City</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@aOppulence.com</p>
+          </div>
+      
+          <!-- Navigation Section -->
+          <div class="footer-section navigation">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/menu">Menu</a></li>
+              <li><a href="/reservation">Reservations</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+      
+          <!-- Social Media Section -->
+          <div class="footer-section social">
+            <h2>Follow Us</h2>
+            <div class="social">
+                <a href=""><i class="bi bi-twitter-x"></i></a>&nbsp;
+                <a href=""><i class="bi bi-facebook"></i></a>&nbsp;
+                <a href=""><i class="bi bi-instagram"></i></a>&nbsp;
+                <a href=""><i class="bi bi-linkedin"></i></a>&nbsp;
+              </div>
+          </div>
+        </div>
+      
+        <p class="footer-note">&copy; 2024 Opulence Restaurant. <span class="text-warning"> All rights reserved.</span></p>
+      </footer>
+
+</body>
+</html>
